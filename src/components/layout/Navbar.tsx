@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useScrolled } from '@/lib/hooks/useScrolled';
 import { navLinks } from '@/data/navigation';
 import { contact } from '@/data/contact';
@@ -10,15 +11,13 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-[90] flex items-center justify-between px-6 py-4 transition-all duration-300 sm:px-10 ${
-        scrolled
-          ? 'border-b border-hairline bg-obsidian-elevated/85 backdrop-blur-xl'
-          : 'border-b border-transparent bg-transparent'
+      className={`fixed inset-x-0 top-0 z-[90] flex items-center justify-between bg-chrome px-6 py-4 transition-shadow duration-300 sm:px-10 ${
+        scrolled ? 'shadow-[0_12px_30px_rgba(43,46,40,0.18)]' : 'shadow-none'
       }`}
     >
-      <div className="font-display text-lg italic text-ivory">
-        Divine Vision <span className="text-champagne">— Infratech</span>
-      </div>
+      <Link href="/" className="font-display shrink-0 text-lg font-bold text-white">
+        Divine Vision
+      </Link>
 
       <div className="flex items-center gap-7">
         <div className="hidden gap-6 sm:flex">
@@ -26,7 +25,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="font-mono-label text-xs text-ivory transition-colors hover:text-champagne"
+              className="eyebrow-label text-xs text-white/85 transition-colors hover:text-terracotta"
             >
               {link.label}
             </a>
@@ -37,7 +36,7 @@ export function Navbar() {
 
         <a
           href={contact.phoneHref}
-          className="font-mono-label rounded-full border border-champagne/60 px-4.5 py-2.5 text-xs text-champagne transition-colors hover:bg-champagne hover:text-obsidian"
+          className="rounded-full bg-white px-5 py-2.5 text-xs font-semibold text-chrome transition-colors hover:bg-terracotta hover:text-white"
         >
           Book a site visit
         </a>

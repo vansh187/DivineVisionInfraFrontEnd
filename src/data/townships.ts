@@ -8,7 +8,7 @@ export const townships: Township[] = [
     name: 'OPS Divine Greens',
     location: 'Karnal · Bang on NH-1',
     description:
-      '369 plots around a 24-metre spine road, with the Florence Club, cricket pitch, tennis court, amphitheatre and two children’s parks inside the gate.',
+      '368 plots around a 24-metre spine road, with the Florence Club, cricket pitch, tennis court, amphitheatre and two children’s parks inside the gate.',
     bounds: { width: 10, depth: 18 },
     plots: opsDivineGreensPlots,
   },

@@ -22,8 +22,8 @@ export function TerrainMesh({ scrollProgressRef }: TerrainMeshProps) {
       uTime: { value: 0 },
       uMouse: { value: new THREE.Vector2(0, 0) },
       uScrollProgress: { value: 0 },
-      uColorBase: { value: new THREE.Color('#0b0e14') },
-      uColorGlow: { value: new THREE.Color('#d4af37') },
+      uColorBase: { value: new THREE.Color('#f0ead9') },
+      uColorGlow: { value: new THREE.Color('#1e4d3b') },
     }),
     [],
   );

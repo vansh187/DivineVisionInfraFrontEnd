@@ -24,8 +24,8 @@ export function MasterplanScene({ township }: MasterplanSceneProps) {
   return (
     <Canvas dpr={[1, 1.5]} gl={{ antialias: true }} performance={{ min: 0.5 }}>
       <PerspectiveCamera makeDefault position={aerial.eye} fov={45} />
-      <ambientLight intensity={0.55} color="#f5f1e8" />
-      <directionalLight position={[6, 10, 4]} intensity={0.9} color="#d4af37" />
+      <ambientLight intensity={0.75} color="#ffffff" />
+      <directionalLight position={[6, 10, 4]} intensity={0.7} color="#f5ead0" />
 
       <mesh
         rotation={[-Math.PI / 2, 0, 0]}
@@ -33,12 +33,12 @@ export function MasterplanScene({ township }: MasterplanSceneProps) {
         onClick={() => setSelectedPlot(null)}
       >
         <planeGeometry args={[township.bounds.width, township.bounds.depth + 4]} />
-        <meshStandardMaterial color="#12161f" roughness={0.95} />
+        <meshStandardMaterial color="#f0ead9" roughness={0.95} />
       </mesh>
 
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, centerZ]}>
         <planeGeometry args={[2.6, township.bounds.depth + 2]} />
-        <meshStandardMaterial color="#1b2030" roughness={0.85} />
+        <meshStandardMaterial color="#dcd2b4" roughness={0.85} />
       </mesh>
 
       {township.plots.map((plot) => (

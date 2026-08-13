@@ -1,22 +1,25 @@
 @import 'tailwindcss';
 
 @theme inline {
-  /* Brand palette — ultra-luxury dark obsidian + champagne gold */
-  --color-obsidian: #0b0e14;
-  --color-obsidian-elevated: #12161f;
-  --color-champagne: #d4af37;
-  --color-champagne-soft: #e9cd7a;
-  --color-ivory: #f5f1e8;
-  --color-ivory-muted: rgba(245, 241, 232, 0.64);
-  --color-hairline: rgba(212, 175, 55, 0.16);
+  /* Brand palette — "The Cultivator" (green/terracotta) with the client's
+     preferred structure: warm cream body, solid green nav/footer chrome. */
+  --color-bg: #f5f2ea;
+  --color-surface: #ffffff;
+  --color-chrome: #1e4d3b;
+  --color-ink: #2b2e28;
+  --color-ink-muted: rgba(43, 46, 40, 0.62);
+  --color-green: #388e3c;
+  --color-green-soft: #4fa653;
+  --color-terracotta: #d84315;
+  --color-hairline: #e4e1d8;
+  --color-hairline-dark: rgba(255, 255, 255, 0.22);
 
-  --font-display: var(--font-fraunces);
-  --font-sans: var(--font-bricolage);
-  --font-mono: var(--font-ibm-plex-mono);
+  --font-display: var(--font-merriweather);
+  --font-sans: var(--font-open-sans);
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * {
@@ -24,21 +27,42 @@
 }
 
 body {
-  background: var(--color-obsidian);
-  color: var(--color-ivory);
+  background: var(--color-bg);
+  color: var(--color-ink);
 }
 
 ::selection {
-  background: var(--color-champagne);
-  color: var(--color-obsidian);
+  background: var(--color-green);
+  color: #fff;
 }
 
 .font-display {
   font-family: var(--font-display);
 }
 
-.font-mono-label {
-  font-family: var(--font-mono);
-  letter-spacing: 0.16em;
+/* Cultivator has no mono/data face — labels use Open Sans, spaced + uppercase. */
+.eyebrow-label {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+@keyframes hero-ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.hero-video-zoom {
+  animation: hero-ken-burns 24s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-zoom {
+    animation: none;
+  }
 }

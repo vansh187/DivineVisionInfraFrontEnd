@@ -8,9 +8,9 @@ import { useMasterplanStore } from '@/lib/store/masterplanStore';
 import type { Plot } from '@/lib/masterplan/types';
 
 const STATUS_COLOR: Record<Plot['status'], string> = {
-  available: '#d4af37',
-  reserved: '#c98a3b',
-  sold: '#4a4a52',
+  available: '#388e3c',
+  reserved: '#d84315',
+  sold: '#8a8a82',
 };
 
 interface PlotMeshProps {

@@ -27,20 +27,20 @@ export function PlotOverlay({ plots }: PlotOverlayProps) {
 
   return (
     <Html position={[x, 0.9, z]} center occlude distanceFactor={8} className="pointer-events-none">
-      <div className="w-56 -translate-y-full rounded-xl border border-hairline bg-obsidian-elevated/90 p-4 text-left shadow-[0_18px_40px_rgba(0,0,0,0.55)] backdrop-blur-xl">
-        <div className="font-mono-label text-champagne">{plot.plotNumber}</div>
-        <div className="mt-2 grid grid-cols-2 gap-2 text-sm text-ivory">
+      <div className="w-56 -translate-y-full rounded-xl border border-hairline bg-surface/95 p-4 text-left shadow-[0_18px_40px_rgba(19,21,17,0.22)] backdrop-blur-xl">
+        <div className="eyebrow-label text-terracotta">{plot.plotNumber}</div>
+        <div className="mt-2 grid grid-cols-2 gap-2 text-sm text-ink">
           <div>
-            <div className="text-[10px] uppercase tracking-wide text-ivory-muted">Size</div>
+            <div className="text-[10px] uppercase tracking-wide text-ink-muted">Size</div>
             <div>{plot.sizeSqYd} sq yd</div>
           </div>
           <div>
-            <div className="text-[10px] uppercase tracking-wide text-ivory-muted">Facing</div>
+            <div className="text-[10px] uppercase tracking-wide text-ink-muted">Facing</div>
             <div className="capitalize">{plot.facing.replace('-', ' ')}</div>
           </div>
           <div className="col-span-2">
-            <div className="text-[10px] uppercase tracking-wide text-ivory-muted">Status</div>
-            <div className={plot.status === 'available' ? 'text-champagne' : 'text-ivory-muted'}>
+            <div className="text-[10px] uppercase tracking-wide text-ink-muted">Status</div>
+            <div className={plot.status === 'available' ? 'text-green' : 'text-ink-muted'}>
               {STATUS_LABEL[plot.status]}
             </div>
           </div>

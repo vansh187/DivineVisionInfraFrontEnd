@@ -24,9 +24,9 @@ export const journeyStops: JourneyStop[] = [
       'DDJAY-approved, 250 metres off the highway. Phase 1 is already occupied — largely by paramilitary families — so the neighbourhood exists before you book.',
     chips: ['120–180 sq yd', 'DDJAY', '24-hr security', 'Yoga podium', 'Community centre'],
     image: {
-      src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Suraksha Enclave Phase 2 Ganaur',
-      tag: 'Aerial render',
+      src: '/townships/suraksha-entrance.jpg',
+      alt: 'Suraksha Enclave entrance gate',
+      tag: 'Site render',
     },
   },
   {
@@ -35,12 +35,12 @@ export const journeyStops: JourneyStop[] = [
     heading: 'OPS Divine',
     headingEmphasis: 'Greens',
     description:
-      "369 plots around a 24-metre spine road, with the Florence Club, cricket pitch, tennis court, amphitheatre and two children's parks inside the gate. Launched March 2023.",
-    chips: ['125–180 sq yd', '369 plots', 'Florence Club', 'Karnal Haveli 4 min', 'Station 17 min'],
+      "368 plots around a 24-metre spine road, with the Florence Club, cricket pitch, tennis court, amphitheatre and two children's parks inside the gate. Launched March 2023.",
+    chips: ['125–180 sq yd', '368 plots', 'Florence Club', 'Karnal Haveli 4 min', 'Station 17 min'],
     image: {
-      src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-      alt: 'OPS Divine Greens Karnal',
-      tag: 'Aerial render',
+      src: '/townships/ops-entrance.jpg',
+      alt: 'OPS Divine Greens entrance with fountain plaza',
+      tag: 'Site render',
     },
   },
   {

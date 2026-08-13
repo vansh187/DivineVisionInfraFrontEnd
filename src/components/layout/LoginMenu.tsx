@@ -14,7 +14,7 @@ export function LoginMenu() {
     <div className="relative" ref={rootRef}>
       <button
         type="button"
-        className="font-mono-label inline-flex items-center gap-1.5 text-xs text-ivory transition-colors hover:text-champagne"
+        className="eyebrow-label inline-flex items-center gap-1.5 text-xs text-white/85 transition-colors hover:text-terracotta"
         aria-haspopup="menu"
         aria-expanded={open}
         onClick={() => setOpen((prev) => !prev)}
@@ -39,14 +39,14 @@ export function LoginMenu() {
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-[calc(100%+16px)] z-20 min-w-[200px] rounded-xl border border-hairline bg-obsidian-elevated/95 p-1.5 shadow-[0_18px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl"
+          className="absolute right-0 top-[calc(100%+16px)] z-20 min-w-[200px] rounded-xl border border-hairline bg-surface p-1.5 shadow-[0_18px_40px_rgba(19,21,17,0.16)]"
         >
           {loginOptions.map((option) => (
             <a
               key={option.href}
               href={option.href}
               role="menuitem"
-              className="block rounded-lg px-3 py-2.5 text-sm text-ivory transition-colors hover:bg-white/5 hover:text-champagne"
+              className="block rounded-lg px-3 py-2.5 text-sm text-ink transition-colors hover:bg-bg hover:text-green"
               onClick={() => setOpen(false)}
             >
               {option.label}

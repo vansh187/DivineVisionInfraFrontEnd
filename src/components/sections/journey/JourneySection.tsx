@@ -20,7 +20,7 @@ export function JourneySection() {
         ))}
       </div>
       <div className="absolute inset-x-6 bottom-6.5 z-10 h-px bg-hairline sm:inset-x-10">
-        <div ref={progressRef} className="absolute inset-y-0 left-0 w-0 bg-champagne" />
+        <div ref={progressRef} className="absolute inset-y-0 left-0 w-0 bg-green" />
       </div>
     </div>
   );
