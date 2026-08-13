@@ -2,7 +2,6 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { JourneyCorridor } from './components/JourneyCorridor';
 import { DeliveredStrip } from './components/DeliveredStrip';
-import { CtaSection } from './components/CtaSection';
 import { Footer } from './components/Footer';
 
 /**
@@ -17,7 +16,6 @@ export function LandingPage() {
       <Hero />
       <JourneyCorridor />
       <DeliveredStrip />
-      <CtaSection />
       <Footer />
     </>
   );

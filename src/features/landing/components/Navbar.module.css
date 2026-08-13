@@ -6,25 +6,32 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px var(--page-pad);
+  background: var(--color-green);
+  color: var(--color-bg);
   transition: 0.35s;
-  border-bottom: 1px solid transparent;
+  box-shadow: 0 1px 0 transparent;
 }
 
 .nav.scrolled {
-  background: rgba(245, 242, 234, 0.92);
-  backdrop-filter: blur(14px);
-  border-color: var(--color-hairline);
+  box-shadow: 0 12px 30px rgba(19, 21, 17, 0.18);
 }
 
 .logo {
   font-weight: 700;
   font-size: 16px;
   letter-spacing: -0.02em;
+  color: var(--color-bg);
 }
 
 .logo i {
   font-style: normal;
-  color: var(--color-green);
+  color: var(--color-gold);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
 
 .links {
@@ -37,27 +44,28 @@
   font-size: 10.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--color-bg);
 }
 
 .links a:hover {
-  color: var(--color-green);
+  color: var(--color-gold);
 }
 
 .pill {
-  border: 1px solid var(--color-ink);
+  border: 1px solid var(--color-bg);
   border-radius: 100px;
   padding: 10px 18px;
   font-family: var(--font-mono);
   font-size: 10.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: var(--color-bg);
   transition: 0.3s;
 }
 
 .pill:hover {
-  background: var(--color-ink);
-  color: var(--color-bg);
+  background: var(--color-bg);
+  color: var(--color-green);
 }
 
 @media (max-width: 860px) {

@@ -1,15 +1,85 @@
 .footer {
-  padding: 30px var(--page-pad);
+  background: var(--color-green);
+  color: var(--color-bg);
+  padding: 48px var(--page-pad) 30px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(4, 1fr);
+  gap: 32px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(242, 239, 228, 0.18);
+}
+
+.brand .logo {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: var(--color-bg);
+}
+
+.brand .logo i {
+  font-style: normal;
+  color: var(--color-gold);
+}
+
+.tagline {
+  margin-top: 14px;
+  color: rgba(242, 239, 228, 0.72);
+  font-size: 13.5px;
+  line-height: 1.7;
+  max-width: 28ch;
+  font-weight: 300;
+}
+
+.heading {
+  display: block;
+  color: var(--color-gold);
+  margin-bottom: 14px;
+}
+
+.column ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.column a,
+.column li {
+  font-size: 13.5px;
+  color: rgba(242, 239, 228, 0.72);
+}
+
+.column a:hover {
+  color: var(--color-gold);
+}
+
+.bottom {
+  margin-top: 24px;
   display: flex;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-.footer div {
+.bottom div {
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: rgba(242, 239, 228, 0.6);
+}
+
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
 }

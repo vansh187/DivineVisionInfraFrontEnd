@@ -1,5 +1,7 @@
 import { useScrolled } from '../../../shared/hooks/useScrolled';
 import { navLinks } from '../data/navigation';
+import { contact } from '../data/contact';
+import { LoginMenu } from './LoginMenu';
 import styles from './Navbar.module.css';
 
 export function Navbar() {
@@ -10,16 +12,19 @@ export function Navbar() {
       <div className={styles.logo}>
         DIVINE VISION <i>—</i> INFRATECH
       </div>
-      <div className={styles.links}>
-        {navLinks.map((link) => (
-          <a key={link.href} href={link.href}>
-            {link.label}
-          </a>
-        ))}
+      <div className={styles.right}>
+        <div className={styles.links}>
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
+        </div>
+        <LoginMenu />
+        <a className={styles.pill} href={contact.phoneHref}>
+          Book a site visit
+        </a>
       </div>
-      <a className={styles.pill} href="#visit">
-        Book a site visit
-      </a>
     </nav>
   );
 }
