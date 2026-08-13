@@ -1,0 +1,15 @@
+/* Design tokens — single source of truth for brand colors, fonts, spacing.
+   Swap values here to re-theme the whole site without touching components. */
+:root {
+  --color-bg: #f5f2ea;
+  --color-ink: #131511;
+  --color-muted: #6c6a61;
+  --color-hairline: #dfdacb;
+  --color-green: #1e4d3b;
+  --color-gold: #b78a34;
+
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --page-pad: clamp(18px, 4.5vw, 70px);
+}

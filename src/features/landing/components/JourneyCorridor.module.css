@@ -1,0 +1,157 @@
+.journey {
+  position: relative;
+}
+
+.track {
+  display: flex;
+  height: 100svh;
+  align-items: stretch;
+  will-change: transform;
+}
+
+.panel {
+  flex: 0 0 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.txt {
+  padding: clamp(80px, 10vh, 140px) clamp(24px, 4vw, 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+}
+
+.img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--color-bg), transparent 25%);
+}
+
+.eyebrow {
+  color: var(--color-gold);
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-size: clamp(30px, 4.6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+
+.heading em {
+  font-style: normal;
+  color: var(--color-green);
+}
+
+.desc {
+  margin-top: 18px;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 42ch;
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.chip {
+  border: 1px solid var(--color-hairline);
+  background: #fff;
+  border-radius: 100px;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  color: var(--color-muted);
+}
+
+.bigNumber {
+  font-size: clamp(70px, 10vw, 150px);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  color: var(--color-green);
+}
+
+.bigNumber small {
+  font-size: 0.32em;
+  letter-spacing: 0;
+  color: var(--color-gold);
+  vertical-align: super;
+}
+
+.imgTag {
+  position: absolute;
+  z-index: 2;
+  right: 14px;
+  top: 14px;
+  background: rgba(245, 242, 234, 0.9);
+  padding: 6px 11px;
+  color: var(--color-muted);
+  font-size: 9.5px;
+}
+
+.progressTrack {
+  position: absolute;
+  left: var(--page-pad);
+  right: var(--page-pad);
+  bottom: 26px;
+  height: 2px;
+  background: var(--color-hairline);
+  z-index: 5;
+}
+
+.progressFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
+  background: var(--color-green);
+  display: block;
+}
+
+@media (max-width: 880px) {
+  .panel {
+    grid-template-columns: 1fr;
+  }
+  .img {
+    order: -1;
+    min-height: 36svh;
+  }
+  .txt {
+    padding-top: 20px;
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    flex-direction: column;
+    height: auto;
+  }
+  .panel {
+    flex-basis: auto;
+  }
+  .progressTrack {
+    display: none;
+  }
+}
