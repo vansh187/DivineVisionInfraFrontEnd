@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Navbar } from '@/components/layout/Navbar';
 import { MasterplanHud } from '@/components/masterplan/MasterplanHud';
 import { MasterplanSceneLoader } from '@/components/masterplan/MasterplanSceneLoader';
+import { AssistantWidget } from '@/components/ai/AssistantWidget';
 import { townships, getTownshipBySlug } from '@/data/townships';
 
 export function generateStaticParams() {
@@ -34,6 +35,7 @@ export default async function MasterplanPage({
       <main className="relative h-svh w-full overflow-hidden">
         <MasterplanSceneLoader township={township} />
         <MasterplanHud township={township} />
+        <AssistantWidget townshipSlug={township.slug} />
       </main>
     </>
   );
