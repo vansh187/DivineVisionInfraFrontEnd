@@ -1,11 +1,15 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import type { JourneyStop } from '@/lib/types';
+import { getTownshipBySlug } from '@/data/townships';
 
 interface JourneyPanelProps {
   stop: JourneyStop;
 }
 
 export function JourneyPanel({ stop }: JourneyPanelProps) {
+  const township = getTownshipBySlug(stop.id);
+
   return (
     <div className="relative grid w-screen flex-none grid-cols-1 md:grid-cols-2">
       <div className="flex flex-col justify-center px-6 py-20 sm:px-12 md:py-0">
@@ -39,6 +43,15 @@ export function JourneyPanel({ stop }: JourneyPanelProps) {
               </span>
             ))}
           </div>
+        )}
+
+        {township && (
+          <Link
+            href={`/masterplan/${township.slug}`}
+            className="font-mono-label mt-6 inline-flex w-fit items-center gap-2 text-champagne transition-colors hover:text-champagne-soft"
+          >
+            Explore in 3D →
+          </Link>
         )}
       </div>
 
