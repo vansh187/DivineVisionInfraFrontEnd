@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+@theme inline {
+  /* Brand palette — ultra-luxury dark obsidian + champagne gold */
+  --color-obsidian: #0b0e14;
+  --color-obsidian-elevated: #12161f;
+  --color-champagne: #d4af37;
+  --color-champagne-soft: #e9cd7a;
+  --color-ivory: #f5f1e8;
+  --color-ivory-muted: rgba(245, 241, 232, 0.64);
+  --color-hairline: rgba(212, 175, 55, 0.16);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-bricolage);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-obsidian);
+  color: var(--color-ivory);
+}
+
+::selection {
+  background: var(--color-champagne);
+  color: var(--color-obsidian);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
